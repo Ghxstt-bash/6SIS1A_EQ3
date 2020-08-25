@@ -10,7 +10,7 @@
  */
 public class DatosCliente {
     private int id;
-    private String nombre, correo, telefono, direccion, contraseña;
+    private String Nombre, Correo, Telefono, Direccion, Contraseña;
 
     public int getId() {
         return id;
@@ -21,42 +21,43 @@ public class DatosCliente {
     }
 
     public String getNombre() {
-        return nombre;
+        return Nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
     }
 
     public String getCorreo() {
-        return correo;
+        return Correo;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setCorreo(String Correo) {
+        this.Correo = Correo;
     }
 
     public String getTelefono() {
-        return telefono;
+        return Telefono;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setTelefono(String Telefono) {
+        this.Telefono = Telefono;
     }
 
     public String getDireccion() {
-        return direccion;
+        return Direccion;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setDireccion(String Direccion) {
+        this.Direccion = Direccion;
     }
 
     public String getContraseña() {
-        return contraseña;
+        return Contraseña;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContraseña(String Contraseña) {
+        this.Contraseña = Contraseña;
     }
+    
 }

@@ -12,9 +12,9 @@ public class AccionesCliente {
     public static Connection getConnection(){
         String url, user, password;
         //donde esta mi bd
-        url="jdbc:mysql:3306/localhost/cliente";
+        url="jdbc:mysql:3306/localhost/clienteaux";
         user="root";
-        password="system";
+        password="root";
         
         //objeto de conexion
         Connection con = null;
@@ -22,7 +22,7 @@ public class AccionesCliente {
             //cuando exista la conexion
             Class.forName("com.mysql.jdbc.Driver");
             //algunas veces no es necesario el puerto, pq ya esta por defecto en el driver
-            url="jdbc:mysql://localhost/cliente";
+            url="jdbc:mysql://localhost/clienteaux";
             //enviamos los parametros de la conexion
             con = DriverManager.getConnection(url, user, password);
             
@@ -48,9 +48,9 @@ public class AccionesCliente {
         
             //voy a mandar a llamar a mi metodo de conexion
             Connection con = AccionesCliente.getConnection();
-            //ahora establezco mi querry
-            String q = "insert into cliente (nom_cli, mail_cli, tel_cli, dir_cli, pass_cli)"
-                    + " values (?,?,?,?)";
+            //ahora establezco mi querry7
+            String q = "INSERT INTO `clienteaux`.`clientes` (`nom_cliente`, `mail_cliente`, `tel_cliente`, `dir_cliente`, `pass_cliente`)"
+                    + "VALUES(?,?,?,?,?)";
             //preparamos la sentencia de la querry
             PreparedStatement ps = con.prepareStatement(q);
             //tanto obtener como enviar los parametros gracias al encapsulamiento
@@ -215,4 +215,4 @@ public class AccionesCliente {
         }
         return lista;
     } 
-}
+}   

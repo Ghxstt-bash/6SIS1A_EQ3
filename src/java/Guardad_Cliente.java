@@ -34,25 +34,25 @@ public class Guardad_Cliente extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             int id;
-            String nombre, correo, telefono, direccion, contraseña;
+            String nom, cor, tel, dir, contra;
             
             //obtener los parametros a traves de la peticion
             
-            nombre = request.getParameter("Nombre");
-            correo = request.getParameter("Correo");
-            telefono = request.getParameter("Telefono");
-            direccion = request.getParameter("Direccion");
-            contraseña = request.getParameter("Contraseña");
+            nom = request.getParameter("Nombre");
+            cor = request.getParameter("Correo");
+            tel = request.getParameter("Telefono");
+            dir = request.getParameter("Direccion");
+            contra = request.getParameter("Contraseña");
             //necesito un obj alumno
             DatosCliente a = new DatosCliente();
             
-            //enviar los parametros a la clase alumno
+            //enviar los parametros a la clase datoscliente
             
-            a.setNombre(nombre);
-            a.setCorreo(correo);
-            a.setTelefono(telefono);
-            a.setDireccion(direccion);
-            a.setContraseña(contraseña);
+            a.setNombre(nom);
+            a.setCorreo(cor);
+            a.setTelefono(tel);
+            a.setDireccion(dir);
+            a.setContraseña(contra);
             //ejecutar la sentencia o querry
             
             int estatus = AccionesCliente.Guardar(a);
@@ -71,13 +71,13 @@ public class Guardad_Cliente extends HttpServlet {
             if(estatus > 0){
             out.println("<h1>Registro Exitoso del Cliente</h1>"
                     + "<br>"
-                    + "<a href='index.html' >Regresar al Menu</a>");
+                    + "<a href='servicios.html' >Regresar al Menu</a>");
             }else{
             
             
             out.println("<h1>No se pudo realizar el registro</h1>"
                     + "<br>"
-                    + "<a href='index.html' >Regresar al Menu</a>");
+                    + "<a href='nueva_cuenta.html' >Regresar al Menu</a>");
             }
             
             out.println("</body>");
@@ -123,5 +123,4 @@ public class Guardad_Cliente extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
 }
